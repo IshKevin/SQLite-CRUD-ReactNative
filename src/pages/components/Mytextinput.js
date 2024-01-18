@@ -8,13 +8,14 @@ const Mytextinput = (props) => {
         marginLeft: 35,
         marginRight: 35,
         marginTop: 10,
-        borderColor: '#00AD98',
+        borderColor: '#029ffc',
         borderWidth: 1,
-      }}>
+      }}
+    >
       <TextInput
         underlineColorAndroid="transparent"
         placeholder={props.placeholder}
-        placeholderTextColor="#00AD98"
+        placeholderTextColor="#029ffc"
         keyboardType={props.keyboardType}
         onChangeText={props.onChangeText}
         returnKeyType={props.returnKeyType}

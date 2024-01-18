@@ -96,38 +96,32 @@ const UpdateUser = ({ navigation }) => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <View style={{ flex: 1, backgroundColor: 'white' }}>
+      <View
+        style={{ flex: 1, backgroundColor: "#111825", justifyContent: "center" }}
+      >
         <View style={{ flex: 1 }}>
           <ScrollView keyboardShouldPersistTaps="handled">
             <KeyboardAvoidingView
               behavior="padding"
-              style={{ flex: 1, justifyContent: 'space-between' }}>
+              style={{ flex: 1, justifyContent: "space-between" }}
+            >
               <Mytext text="User Filter" />
               <Mytextinput
                 placeholder="Enter User Code"
                 style={{ padding: 10 }}
-                onChangeText={
-                  (inputUserId) => setInputUserId(inputUserId)
-                }
+                onChangeText={(inputUserId) => setInputUserId(inputUserId)}
               />
-              <Mybutton
-                title="Search User"
-                customClick={searchUser}
-              />
+              <Mybutton title="Search User" customClick={searchUser} />
               <Mytextinput
                 placeholder="Enter the name"
                 value={userName}
                 style={{ padding: 10 }}
-                onChangeText={
-                  (userName) => setUserName(userName)
-                }
+                onChangeText={(userName) => setUserName(userName)}
               />
               <Mytextinput
                 placeholder="Enter the number"
-                value={'' + userContact}
-                onChangeText={
-                  (userContact) => setUserContact(userContact)
-                }
+                value={"" + userContact}
+                onChangeText={(userContact) => setUserContact(userContact)}
                 maxLength={10}
                 style={{ padding: 10 }}
                 keyboardType="numeric"
@@ -135,18 +129,13 @@ const UpdateUser = ({ navigation }) => {
               <Mytextinput
                 value={userAddress}
                 placeholder="Enter the address"
-                onChangeText={
-                  (userAddress) => setUserAddress(userAddress)
-                }
+                onChangeText={(userAddress) => setUserAddress(userAddress)}
                 maxLength={225}
                 numberOfLines={5}
                 multiline={true}
-                style={{ textAlignVertical: 'top', padding: 10 }}
+                style={{ textAlignVertical: "top", padding: 10 }}
               />
-              <Mybutton
-                title="Update User"
-                customClick={updateUser}
-              />
+              <Mybutton title="Update User" customClick={updateUser} />
             </KeyboardAvoidingView>
           </ScrollView>
         </View>
